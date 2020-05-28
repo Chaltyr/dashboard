@@ -82,13 +82,6 @@ const columns = [
       
       const classes = useStyles();
 
-    //   const compare = () => {
-    //       Object.values(instruments).map(item => (
-    //           if (item.BID > item.ASK) {
-    //               return "red"
-    //           }
-    //   ))
-    //   }
     
     return (
         <Paper className={classes.root}>
@@ -115,28 +108,29 @@ const columns = [
                       const item = instrument[column.id];
                     //   let letters = "<span>"
                       let item_pos = item.toString().includes("span")
-                      let bid = instrument.BID
-                      let ask = instrument.ASK
+                      let bid = (Math.round(parseFloat(instrument.BID)*100)/100)
+                      let ask = (Math.round(parseFloat(instrument.ASK)*100)/100)
                       let letters = /^[A-Za-z]+$/;
                       let sym = instrument.SYMBOL
+                      let difference = (Math.abs(bid - ask) == 0.01)
                       
                       console.log(bid)
-                      console.log(bid == ask)
-                      const checkHigher = () => {
-                        if(bid>ask) {
-                            return (
-                                <TableCell key={column.id} align={column.align} style={{color: 'red'}}>
-                                    {item}
-                                </TableCell> 
-                            )
-                        } else{
-                            return(
-                                <TableCell key={column.id} align={column.align} style={{color: 'red'}}>
-                                {item}
-                            </TableCell> 
-                            )                          
-                        }                               
-                      }
+                    //   console.log(bid == ask)
+                    //   const checkHigher = () => {
+                    //     if(bid>ask) {
+                    //         return (
+                    //             <TableCell key={column.id} align={column.align} style={{color: 'red'}}>
+                    //                 {item}
+                    //             </TableCell> 
+                    //         )
+                    //     } else{
+                    //         return(
+                    //             <TableCell key={column.id} align={column.align} style={{color: 'red'}}>
+                    //             {item}
+                    //         </TableCell> 
+                    //         )                          
+                    //     }                               
+                    //   }
                     
                       
                         if(item_pos){

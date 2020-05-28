@@ -8,7 +8,6 @@ import TradingView from '../components/tradingview';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
-import Icon from '@material-ui/core/Icon';
 import { OutlinedInput } from '@material-ui/core';
 
 
@@ -58,11 +57,10 @@ const Homepage = () => {
 
     return (
         <div style={{backgroundColor: "#f2f3f8"}}>
-            this is the Homepage
             <div className="navbar" 
                 style={{
                 display: 'flex',
-                justifyContent: 'space-evenly'
+                justifyContent: 'space-evenly',
 
             }}>
                 <div style={{display: 'flex',
@@ -72,7 +70,9 @@ const Homepage = () => {
                              paddingTop: "20px",
                              paddingBottom: "20px",
                              paddingRight: "20px",
-                             paddingLeft: "20px"
+                             paddingLeft: "20px",
+                             marginTop: '20px'
+
             }}>
                     <div style={{
                         marginRight: "60px",
@@ -97,7 +97,9 @@ const Homepage = () => {
                              paddingTop: "20px",
                              paddingBottom: "20px",
                              paddingRight: "20px",
-                             paddingLeft: "20px"
+                             paddingLeft: "20px",
+                             marginTop: '20px'
+
                              
             }}>
                     <div style={{
@@ -123,7 +125,9 @@ const Homepage = () => {
                              paddingTop: "20px",
                              paddingBottom: "20px",
                              paddingRight: "20px",
-                             paddingLeft: "20px"
+                             paddingLeft: "20px",
+                             marginTop: '20px'
+
             }}>
                     <div style={{
                         marginRight: "60px",
@@ -148,7 +152,9 @@ const Homepage = () => {
                              paddingTop: "20px",
                              paddingBottom: "20px",
                              paddingRight: "20px",
-                             paddingLeft: "20px"
+                             paddingLeft: "20px",
+                             marginTop: '20px'
+
             }}>
                     <div style={{
                         marginRight: "60px",
@@ -170,7 +176,6 @@ const Homepage = () => {
             </div>
             <div style={{
                 display: 'flex',
-                // justifyContent: 'space-evenly',
                 marginTop: '20px',
 
             }}>
@@ -390,11 +395,7 @@ const Homepage = () => {
 
             </div>
             
-            <style jsx>
-                {`
-                    
-                `}
-            </style>
+           
         </div>
     )
 }
